@@ -23,6 +23,12 @@ input:checked + label {
 
 div > h2 {
   margin-bottom: 0;
+
+  cursor: pointer;
+}
+
+.listHeader:hover {
+  text-decoration: underline;
 }
 
 button {

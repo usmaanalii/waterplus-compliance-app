@@ -7,8 +7,10 @@ const App = () => {
     listB: 0,
   };
   const [checkedItems, setCheckedItems] = useState(defaultCheckedItemsState);
-
   const [compliancePassed, setCompliancePassed] = useState(false);
+
+  const [showListA, setShowListA] = useState(true);
+  const [showListB, setShowListB] = useState(true);
 
   const onChangeHandler = (event) => {
     if (event.target.checked) {
@@ -47,137 +49,143 @@ const App = () => {
       </h2>
 
       <div>
-        <h2>List A</h2>
+        <h2 className="listHeader" onClick={() => setShowListA(!showListA)}>
+          List A
+        </h2>
+        {showListA && (
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="a_1"
+                    name="listA"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
 
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="a_1"
-                  name="listA"
-                  onChange={(event) => onChangeHandler(event)}
-                />
+                  <label htmlFor="a_1">
+                    Contact Name or any other name authorised on the account
+                    (Including position at company)
+                  </label>
+                </td>
+              </tr>
 
-                <label htmlFor="a_1">
-                  Contact Name or any other name authorised on the account
-                  (Including position at company)
-                </label>
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="a_2"
+                    name="listA"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
 
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="a_2"
-                  name="listA"
-                  onChange={(event) => onChangeHandler(event)}
-                />
+                  <label htmlFor="a_2">Customer’s Account Number</label>
+                </td>
+              </tr>
 
-                <label htmlFor="a_2">Customer’s Account Number</label>
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="a_3"
+                    name="listA"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
 
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="a_3"
-                  name="listA"
-                  onChange={(event) => onChangeHandler(event)}
-                />
+                  <label htmlFor="a_3">Amount of Last Invoice</label>
+                </td>
+              </tr>
 
-                <label htmlFor="a_3">Amount of Last Invoice</label>
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="a_4"
+                    name="listA"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
+                  <label htmlFor="a_4">Customer’s current Payment Method</label>
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="a_4"
-                  name="listA"
-                  onChange={(event) => onChangeHandler(event)}
-                />
-                <label htmlFor="a_4">Customer’s current Payment Method</label>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="a_3"
-                  name="listA"
-                  onChange={(event) => onChangeHandler(event)}
-                />
-                <label htmlFor="a_3">Customer’s Email Address</label>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="a_3"
+                    name="listA"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
+                  <label htmlFor="a_3">Customer’s Email Address</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        )}
       </div>
 
       <div>
-        <h2>List B</h2>
+        <h2 className="listHeader" onClick={() => setShowListB(!showListB)}>
+          List B
+        </h2>
+        {showListB && (
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="b_1"
+                    name="listB"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
 
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="b_1"
-                  name="listB"
-                  onChange={(event) => onChangeHandler(event)}
-                />
+                  <label htmlFor="b_1">Company Name/Trading Name</label>
+                </td>
+              </tr>
 
-                <label htmlFor="b_1">Company Name/Trading Name</label>
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="b_2"
+                    name="listB"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
 
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="b_2"
-                  name="listB"
-                  onChange={(event) => onChangeHandler(event)}
-                />
+                  <label htmlFor="b_2">Customer’s Contact Number</label>
+                </td>
+              </tr>
 
-                <label htmlFor="b_2">Customer’s Contact Number</label>
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="b_3"
+                    name="listB"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
 
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="b_3"
-                  name="listB"
-                  onChange={(event) => onChangeHandler(event)}
-                />
+                  <label htmlFor="b_3">Customer’s Billing Address</label>
+                </td>
+              </tr>
 
-                <label htmlFor="b_3">Customer’s Billing Address</label>
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    id="b_4"
+                    name="listB"
+                    onChange={(event) => onChangeHandler(event)}
+                  />
 
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  id="b_4"
-                  name="listB"
-                  onChange={(event) => onChangeHandler(event)}
-                />
-
-                <label htmlFor="b_4">Customer’s Supply Address</label>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  <label htmlFor="b_4">Customer’s Supply Address</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        )}
       </div>
 
       <br />

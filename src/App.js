@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 
 const App = () => {
   const defaultCheckedItemsState = {
@@ -42,10 +41,17 @@ const App = () => {
         List B
       </h1>
 
-      <h2 style={{ color: compliancePassed ? "green" : "red" }}>
+      <h2
+        style={{
+          color: compliancePassed ? "#2eb217" : "red",
+          background: "white",
+          width: "fit-content",
+          padding: "0 5px 0 0",
+        }}
+      >
         {compliancePassed
-          ? "Compliance status: PASSED"
-          : "Compliance status: FAILED"}
+          ? "Compliance status: PASSED ✅"
+          : "Compliance status: FAILED ❌"}
       </h2>
 
       <div>

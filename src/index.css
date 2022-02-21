@@ -27,7 +27,7 @@ table {
 }
 
 td {
-  display: flex;
+  /* display: flex; */
 }
 
 input:checked + label {
@@ -41,6 +41,7 @@ div > h2 {
 
   cursor: pointer;
 }
+
 .listHeader {
   font-size: 18px;
 }

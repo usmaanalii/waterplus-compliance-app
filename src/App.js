@@ -36,22 +36,27 @@ const App = () => {
 
   return (
     <>
-      <h1 style={{ fontSize: "16px", textDecoration: "underline" }}>
+      <h1 style={{ fontSize: "22px", textDecoration: "underline" }}>
         3 Question from List A or 2 Questions from List A and 2 Questions from
         List B
       </h1>
 
       <h2
         style={{
-          color: compliancePassed ? "#2eb217" : "red",
-          border: "5px solid white",
+          color: "white",
           width: "fit-content",
           padding: "0 5px 0 0",
         }}
       >
-        {compliancePassed
-          ? "Compliance status: PASSED ✅"
-          : "Compliance status: FAILED ❌"}
+        <span>Compliance status: </span>
+        <span
+          style={{
+            marginLeft: "5px",
+            color: compliancePassed ? "#1CB01c" : "red",
+          }}
+        >
+          {compliancePassed ? "PASSED ✅" : "FAILED ❌"}
+        </span>
       </h2>
 
       <div>

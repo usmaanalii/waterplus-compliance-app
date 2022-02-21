@@ -26,10 +26,6 @@ table {
   border-spacing: 0 1em;
 }
 
-td {
-  /* display: flex; */
-}
-
 input:checked + label {
   background-color: white;
   color: #000;

@@ -44,7 +44,7 @@ const App = () => {
       <h2
         style={{
           color: compliancePassed ? "#2eb217" : "red",
-          background: "white",
+          border: "5px solid white",
           width: "fit-content",
           padding: "0 5px 0 0",
         }}

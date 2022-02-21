@@ -41,7 +41,9 @@ div > h2 {
 
   cursor: pointer;
 }
-
+.listHeader {
+  font-size: 18px;
+}
 .listHeader:hover {
   text-decoration: underline;
 }
